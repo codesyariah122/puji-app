@@ -3,18 +3,16 @@
 module.exports = (app) => {
 const Data = require('../models/Data')
 const MyData = require('../MyData')
-const url = require('location-href')
 
 	app.get('/', (req, res) => {
 		const data = {
 			"template": "HomeContent.ejs",
 			"brand": "Puji.Dev",
-			"url": url.set(),
 			"title": "Home.Page",
 			"content": MyData,
 			"header": "I <span> Love </span> You When You <span> Love </span>",
 		}
-
+		
 		res.render('index', data)
 	})
 
