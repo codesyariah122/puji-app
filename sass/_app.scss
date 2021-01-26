@@ -137,8 +137,8 @@
 // waves
  .box-wave {
       width: 350px;
-      height: 350px;
-      border-radius: 5px;
+      height: 800px;
+      border-radius: 10px;
       box-shadow: 0 0 1px rgba(black, .1);
       background: screen(#f0f4c3, 10%);
       position: relative;
@@ -153,7 +153,7 @@
       left: 50%;
       background: #0af;
       width: 500px;
-      height: 500px;
+      height: 700px;
       margin-left: -250px;
       margin-top: -250px;
       transform-origin: 50% 48%;

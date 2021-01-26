@@ -1,8 +1,10 @@
 'use strict';
 
 module.exports = (app) => {
-const Data = require('../models/Data')
+// const Data = require('../models/Data')
 const MyData = require('../MyData')
+const axios = require('axios')
+require('dotenv/config')
 
 	app.get('/', (req, res) => {
 		const data = {
@@ -17,51 +19,60 @@ const MyData = require('../MyData')
 	})
 
 	app.get('/about', (req, res) => {
-		const data = {
-			"template": "AboutContent.ejs",
-			"brand": "Puji.Dev",
-			"title": "About.Page",
-			"header": "Where <span>Gonna </span>  Make A <span> Big </span> Family"
-		}
-
-		res.render('index', data)
+		axios({
+			method: 'get',
+			url: `https://api.github.com/users/${process.env.GITHUB_USERNAME}`
+		}).then(response => {
+			const aboutData = {
+				"template": "AboutContent.ejs",
+				"brand": "Puji.Dev",
+				"title": "About.Page",
+				"profile": response.data, 
+				"content": MyData,
+				"header": "Where <span>Gonna </span>  Make A <span> Big </span> Family"
+			}
+			res.render('index', aboutData)
+		}).catch(err => {
+			res.json(err)
+		})
 	})
 
-	// app.get('/project', (req, res) => {
-	// 	const data = {
-	// 		"template": "ProjectContent.ejs",
-	// 		"brand": "Puji.Dev",
-	// 		"title": "Project.Page",
-	// 		"jobs": MyData,
-	// 		"header": "Welcome To <span>Our Place</span>"
+	app.get('/project', (req, res) => {
+		const data = {
+			"template": "ProjectContent.ejs",
+			"brand": "Puji.Dev",
+			"title": "Project.Page",
+			"projects": MyData,
+			"header": "Welcome To <span>Our Place</span>"
+		}
+
+			res.render('index', data)		
+	})
+
+
+	// app.get('/project', async (req, res) => {
+	// 	try{
+	// 		const projects = await Data.find()
+
+	// 		const data = {
+	// 			"template": "ProjectContent.ejs",
+	// 			"brand": "Puji.Dev",
+	// 			"title": "Project.Page",
+	// 			"projects": projects,
+	// 			"header": "Welcome To <span>Our Place</span>"
+	// 		}
+
+	// 		res.render('index', data)			
+	// 	}catch(err){
+	// 		res.json({message: err})
 	// 	}
 
-	// 		res.render('index', data)		
 	// })
-
-	app.get('/project', async (req, res) => {
-		try{
-			const projects = await Data.find()
-
-			const data = {
-				"template": "ProjectContent.ejs",
-				"brand": "Puji.Dev",
-				"title": "Project.Page",
-				"projects": projects,
-				"header": "Welcome To <span>Our Place</span>"
-			}
-
-			res.render('index', data)			
-		}catch(err){
-			res.json({message: err})
-		}
-
-	})
 
 	app.get('/views', async(req, res)=>{
 		
 		try{
-			const projects = await Data.find()
+			const projects = await MyData.ProjectData
 			res.json(projects)	
 		}catch(err){
 			res.json({message: err})
@@ -87,5 +98,17 @@ const MyData = require('../MyData')
 		}
 
 	})
+
+
+	// app.get('/api/users', (req, res)=>{
+	// 	axios({
+	// 		method: 'get',
+	// 		url: 'https://api.github.com/users/codesyariah122'
+	// 	}).then(response => {
+	// 		res.json(response.data)
+	// 	}).catch(err => {
+	// 		res.json(err)
+	// 	})
+	// })
 
 }

@@ -1,1 +1,45 @@
-<h1>About Content</h1>
+<div class="row justify-content-center">
+            <div class="col-md-8 mt-5">
+                <div class="polaroid mt-5">
+                    <img src="images/<% content.PolaroidAbout.map(data=>{%><%=data.img %><% }) %>" class="img-responsive" alt="">
+                    <div class="polaroid-body">
+                        <h2>
+                           <%=profile.name%>
+                        </h2>
+                        <blockquote class="text-success">
+                        	<%=profile.bio%>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-md-12">
+            <h1 class="underline"></h1>
+        </div>
+        
+    </div>
+    <!-- akhir container -->
+	
+    <!-- parallax -->
+
+<div class="parallax" style="background-image: url('images/<%content.ParallaxContentAbout.map(data=>{%><%=data.img%><%})%>');">
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class='box-wave'>
+          <div class='wave -one'></div>
+          <div class='wave -two'></div>
+          <div class='wave -three'></div>
+          <div class='title-wave'>
+            <h4>
+             <% content.ParallaxContentAbout.map(data => {%>
+                <%= data.content %>
+             <% }) %>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>

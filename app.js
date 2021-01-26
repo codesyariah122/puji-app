@@ -2,6 +2,8 @@ const express = require('express')
 
 const path = require('path')
 
+const cors = require('cors')
+
 const app = express()
 
 const port = process.env.PORT || 3000
@@ -15,7 +17,10 @@ require('dotenv/config')
 
 
 // middlewares
+// app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+app.use(cors())
 
 // import routes
 const Router = require('./routes/index')
@@ -41,11 +46,11 @@ Router(app)
 // 	res.send('We are on Posts')
 // });
 
-// Connect to DB
-mongoose.connect(process.env.DB_CONNECTION, 
-	{useNewUrlParser: true, useUnifiedTopology: true}, 
-	() => console.log('connected to DB !')
-);
+// // Connect to DB
+// mongoose.connect(process.env.DB_CONNECTION, 
+// 	{useNewUrlParser: true, useUnifiedTopology: true}, 
+// 	() => console.log('connected to DB !')
+// );
 
 app.listen(port, () => {
 	console.log(`Server run on ${port}`)

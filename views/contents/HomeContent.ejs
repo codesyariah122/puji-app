@@ -1,10 +1,10 @@
  <div class="row justify-content-center">
             <div class="col-md-8 mt-5">
                 <div class="polaroid mt-5">
-                    <img src="images/<% content.Polaroid.map(data=>{%><%=data.img %><% }) %>" class="img-responsive" alt="">
+                    <img src="images/<% content.PolaroidHome.map(data=>{%><%=data.img %><% }) %>" class="img-responsive" alt="">
                     <div class="polaroid-body">
                             <h2>
-                              <% content.Polaroid.map(data=>{%>
+                              <% content.PolaroidHome.map(data=>{%>
                                 <%=data.content %>
                               <% }) %> 
                               </h2>
@@ -22,7 +22,7 @@
 	
     <!-- parallax -->
 
-<div class="parallax" style="background-image: url('images/<%content.ParallaxHome1.map(data=>{%><%=data.img%><%})%>');">
+<div class="parallax" style="background-image: url('images/<%content.ParallaxContentHome.map(data=>{%><%=data.img%><%})%>');">
 <div class="container">
     <div class="row">
       <div class="col-md-4">
@@ -32,7 +32,7 @@
           <div class='wave -three'></div>
           <div class='title-wave'>
             <h4>
-             <% content.ParallaxHome1.map(data => {%>
+             <% content.ParallaxContentHome.map(data => {%>
                 <%= data.content %>
              <% }) %>
             </h4>
