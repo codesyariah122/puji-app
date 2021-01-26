@@ -1,26 +1,14 @@
-/*
-Theme Name: websiteku
-Theme URI: https://codesyariah122.github.io/
-Author: Puji Ermanto
-Author URI: https://pujiermanto.netlify.app/
-Description: Template wordpress dengan bootstrap framework.
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: Responsive, Bootstrap
-*/
-/* navbar */
 @font-face {
   font-family: "SpringSakura";
   font-style: normal;
   font-weight: normal;
-  src: local("SpringSakura"), url("https://github.com/codesyariah122/kerjaan-syoobe/blob/main/for_page/fonts/SpringSakura-3z1m8.otf") format("otf");
+  src: local("SpringSakura"), url("/fonts/SpringSakura-3z1m8.otf") format("otf");
 }
 @font-face {
   font-family: "Reey Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Reey Regular"), url("https://github.com/codesyariah122/kerjaan-syoobe/blob/main/for_page/fonts/Reey-Regular.woff") format("woff");
+  src: local("Reey Regular"), url("/fonts/Reey-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Lemon/Milk Regular";
@@ -97,12 +85,13 @@ Tags: Responsive, Bootstrap
   font-weight: 200;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
-  font-family: "Lemon/Milk Regular";
+  font-family: "Poppins", sans-serif;
 }
 
 .jumbotron .display-4 span {
   font-weight: 500;
   color: tomato;
+  font-family: "Reey Regular";
 }
 
 /* info-panel */
@@ -135,6 +124,83 @@ Tags: Responsive, Bootstrap
   font-weight: 200;
 }
 
+.box-wave {
+  width: 350px;
+  height: 350px;
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  background: screen(#f0f4c3, 10%);
+  position: relative;
+  overflow: hidden;
+}
+
+.wave {
+  opacity: 0.4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: #0af;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: 0.1;
+  background: yellow;
+}
+
+.box-wave:after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ee88aa, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5));
+  z-index: -1;
+  transform: translate3d(0, 0, 0);
+}
+
+.title-wave {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  line-height: 300px;
+  text-align: left;
+  transform: translate3d(0, 0, 0);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Poiret One", cursive;
+  letter-spacing: 0.4em;
+  font-size: 14px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.titl-wave a {
+  margin-left: 2rem;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
 /* content page */
 /* polaroid */
 .polaroid {
@@ -158,6 +224,9 @@ Tags: Responsive, Bootstrap
   font-family: "Poiret One", cursive;
   font-weight: bold;
   font-size: 25px;
+}
+.polaroid-body h2 span {
+  font-family: "SpringSakura";
 }
 
 /* end polaroid */
@@ -251,6 +320,7 @@ Tags: Responsive, Bootstrap
 
   .jumbotron .display-4 {
     text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
   }
 
   /* content */
@@ -272,9 +342,9 @@ Tags: Responsive, Bootstrap
   }
 
   .polaroid img {
-    width: 500px;
-    height: 400px;
-    margin-top: 1rem;
+    width: 100%;
+    height: 500px;
+    margin-top: -1rem;
   }
 
   /* all parallax top and bottom */
@@ -307,6 +377,11 @@ Tags: Responsive, Bootstrap
 
   .caption a {
     font-size: 18px;
+  }
+
+  .waves {
+    height: 40px;
+    min-height: 40px;
   }
 }
 

@@ -39,7 +39,7 @@ $(document).ready(function(){
     // alert(object.menuItem.length);
     object.menuItem.last().after(
         `
-            <a href="${object.baseUrl}contact" class="menu-item btn btn-success tombol">join us</a>
+            <a href="${object.baseUrl}contact" class="menu-item btn btn-success tombol">Ask Me</a>
         `
     );
 
