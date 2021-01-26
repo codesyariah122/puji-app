@@ -4,7 +4,7 @@
   "description": "pujiermanto | fullstack.dev",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon app.js --trace-deprecation",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "pujiermanto",
@@ -19,6 +19,7 @@
     "express": "^4.17.1",
     "express-async-await": "^1.1.0",
     "express-react-views": "^0.11.0",
+    "location-href": "^1.0.0",
     "mongoose": "^5.11.13",
     "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",

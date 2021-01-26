@@ -20,9 +20,9 @@ app.use(bodyParser.json())
 // import routes
 const Router = require('./routes/index')
 
-// const postRoute = require('./routes/posts')
+const postRoute = require('./routes/posts')
 
-// app.use('/posts', postRoute)
+app.use('/posts', postRoute)
 
 app.use(express.static('public/assets'))
 

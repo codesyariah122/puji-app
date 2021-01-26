@@ -20,7 +20,8 @@ router.get('/', async(req, res) => {
 router.post('/', async (req, res)=>{
 	const post = new Post({
 		title: req.body.title,
-		description: req.body.description
+		description: req.body.description,
+		content: req.body.content
 	});
 	try{
 		const savePost = await post.save();
