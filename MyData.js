@@ -1,32 +1,32 @@
-const PolaroidHome = [
+const PolaroidContent = [
 	{
+		id: 1,
 		img: "webdev1.gif",
 		content: "Everymorning, Everyday, Everynight always work, I Love Work. Script Again Coffee Again" 
-	}
-
-];
-
-const PolaroidAbout = [
+	},
 	{
+		id: 2,
 		img: "sayhalo1.gif",
 		content: "Menunduk tak cukup tanpa ilmu, raihlah dalam luasnya ilmu" 
 	}
 
 ];
 
-const ParallaxContentHome = [
+
+const ParallaxContent = [
 	{
+		id: 1,
 		img: "author12.jpg",
 		content: 'Andai hujanmu berhenti.\n Terbata mengeja puisi. Ada yang hening membeku. \n Roboh di altar sang waktu. \n Hujan ini sebut kamu. \n Pergi di ujung rindu. \n Lara percikan sendu. \n Datangi sela-sela ragu'
-	}
-]
-
-const ParallaxContentAbout = [
+	},
 	{
+		id: 2,
 		img: "bg-2.jpg",
 		content: 'Beriak senyum menuntun pusaran. \n Nafasmu di celah dedaunan. \n Menelisik risau yang kau hembuskan.'
 	}
 ]
+
+
 
 const ProjectData = [
 {
@@ -53,9 +53,7 @@ const ProjectData = [
 
 module.exports = 
 {
-	PolaroidHome, 
-	PolaroidAbout, 
-	ParallaxContentHome, 
-	ParallaxContentAbout, 
+	PolaroidContent, 
+	ParallaxContent, 
 	ProjectData
 }

@@ -22,8 +22,9 @@
 }
 
 .navbar-brand {
-  font-family: Viga;
-  font-size: 32px;
+  font-family: "Poiret One";
+  font-weight: 900;
+  font-size: 32px !important;
   text-transform: capitalize;
 }
 
@@ -230,8 +231,14 @@
   font-weight: bold;
   font-size: 25px;
 }
-.polaroid-body h2 span {
+.polaroid-body span {
   font-family: "SpringSakura";
+}
+.polaroid-body img {
+  border-radius: 70%;
+  width: 250px !important;
+  height: 250px !important;
+  margin-top: -5rem !important;
 }
 
 /* end polaroid */
@@ -385,6 +392,13 @@
     margin: auto;
     padding-bottom: 5px;
     margin-bottom: -8px;
+  }
+
+  .active {
+    font-weight: 900;
+    font-style: italic;
+    text-transform: capitalize;
+    color: salmon !important;
   }
 
   .transparent-nav {

@@ -9,9 +9,11 @@ require('dotenv/config')
 	app.get('/', (req, res) => {
 		const data = {
 			"template": "HomeContent.ejs",
+			"url": req.originalUrl,
 			"brand": "Puji.Dev",
 			"title": "Home.Page",
-			"content": MyData,
+			"parallax": MyData.ParallaxContent[0],
+			"polaroid": MyData.PolaroidContent[0],
 			"header": "I <span> Love </span> You When You <span> Love </span>",
 		}
 		
@@ -25,10 +27,12 @@ require('dotenv/config')
 		}).then(response => {
 			const aboutData = {
 				"template": "AboutContent.ejs",
+				"url": req.originalUrl,
 				"brand": "Puji.Dev",
 				"title": "About.Page",
 				"profile": response.data, 
-				"content": MyData,
+				"parallax": MyData.ParallaxContent[1],
+				"polaroid": MyData.PolaroidContent[1],
 				"header": "Where <span>Gonna </span>  Make A <span> Big </span> Family"
 			}
 			res.render('index', aboutData)
@@ -40,6 +44,7 @@ require('dotenv/config')
 	app.get('/project', (req, res) => {
 		const data = {
 			"template": "ProjectContent.ejs",
+			"url": req.originalUrl,
 			"brand": "Puji.Dev",
 			"title": "Project.Page",
 			"projects": MyData,

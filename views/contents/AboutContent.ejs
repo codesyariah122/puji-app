@@ -1,13 +1,22 @@
 <div class="row justify-content-center">
             <div class="col-md-8 mt-5">
                 <div class="polaroid mt-5">
-                    <img src="images/<% content.PolaroidAbout.map(data=>{%><%=data.img %><% }) %>" class="img-responsive" alt="">
+                    <img src="images/<%=polaroid.img %>" class="img-responsive" alt="">
                     <div class="polaroid-body">
+                      <img src="<%=profile.avatar_url%>">
                         <h2>
                            <%=profile.name%>
                         </h2>
-                        <blockquote class="text-success">
-                        	<%=profile.bio%>
+                        <small class="text-success">
+                          <%=profile.login%>
+                        </small>
+                        <blockquote class="text-primary">
+                        	<%=profile.bio%> <br/>
+                          <span class="text-info">
+                            <a href="<%=profile.blog%>">
+                              Portfolio
+                            </a>
+                          </span>
                         </blockquote>
                     </div>
                 </div>
@@ -23,7 +32,7 @@
 	
     <!-- parallax -->
 
-<div class="parallax" style="background-image: url('images/<%content.ParallaxContentAbout.map(data=>{%><%=data.img%><%})%>');">
+<div class="parallax" style="background-image: url('images/<%=parallax.img%>');">
 <div class="container">
     <div class="row">
       <div class="col-md-4">
@@ -33,9 +42,7 @@
           <div class='wave -three'></div>
           <div class='title-wave'>
             <h4>
-             <% content.ParallaxContentAbout.map(data => {%>
-                <%= data.content %>
-             <% }) %>
+                <%= parallax.content %>
             </h4>
           </div>
         </div>
