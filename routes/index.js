@@ -3,8 +3,12 @@
 module.exports = (app) => {
 // const Data = require('../models/Data')
 const MyData = require('../MyData')
+const Surah = require('../data/surah.json')
+// const { caching } = require('./middlewares')
+// const SurahHandler = require('../handlers/surah')
 const axios = require('axios')
 require('dotenv/config')
+
 
 	app.get('/', (req, res) => {
 		const data = {
@@ -55,6 +59,8 @@ require('dotenv/config')
 	})
 
 
+
+
 	// app.get('/project', async (req, res) => {
 	// 	try{
 	// 		const projects = await Data.find()
@@ -73,6 +79,21 @@ require('dotenv/config')
 	// 	}
 
 	// })
+
+
+	app.get('/api/surah', async(req, res) => {
+		try {
+			const surah = await Surah
+			res.json(surah)
+		}catch(err){
+			res.json({message: err})
+		}
+	})
+
+	app.get('/api/surah/:no', (req, res) => {
+		const id = req.params.no
+		res.send(id)
+	})
 
 	app.get('/views', async(req, res)=>{
 		
