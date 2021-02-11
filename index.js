@@ -26,7 +26,7 @@ app.set('views', Path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 
-app.use(Express.static(Path.join(__dirname, 'client/build')))
+// app.use(Express.static(Path.join(__dirname, 'client/build')))
 
 // app.get('*', (req, res) => {
 // 	res.sendFile(Path.join(`${__dirname}/client/build/index.html`))
