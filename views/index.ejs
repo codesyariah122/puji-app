@@ -1,18 +1,15 @@
-<%-include('./templates/head.ejs') %>
-<%- include('./templates/links.ejs') %>
-<%- include('./templates/navigation.ejs') %>
-<%- include('./contents/jumbotron.ejs') %>
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+</head>
+<body>
 
-<div id="contentApp">    
-    <div class="container">
-    	<% if(template == "HomeContent.ejs"){ %>
-	      	<%- include('./contents/HomeContent.ejs') %>
-	    <% } else if(template == "AboutContent.ejs"){ %>
-		    <%- include('./contents/AboutContent.ejs') %>
-		<% } else if(template == "ProjectContent.ejs"){ %>
-			<%- include('./contents/ProjectContent.ejs') %>
-		<% } %>
-    </div>
-</div>
+	<h1><%= header%></h1>
 
-<%- include('./templates/script.ejs')%>
+	<ul class="user-list">
+	</ul>
+
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
