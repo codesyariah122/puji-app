@@ -8,7 +8,7 @@
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"yarn start\" \"npm run client\"",
+    "dev": "concurrently \"npm start\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
