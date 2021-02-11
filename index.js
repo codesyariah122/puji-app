@@ -26,6 +26,11 @@ app.set('views', Path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 
+app.use(Express.static(Path.join(__dirname, 'client/build')))
+
+app.get('*', (req, res) => {
+	res.sendFile(Path.join(`${__dirname}/client/build/index.html`))
+})
 app.use(Router)
 
 app.listen(PORT, () => {
@@ -33,9 +38,3 @@ app.listen(PORT, () => {
 })
 
 
-
-// app.use(Express.static(Path.join(__dirname, 'client/build')))
-
-// app.get('*', (req, res) => {
-// 	res.sendFile(Path.join(`${__dirname}/client/build/index.html`))
-// })
