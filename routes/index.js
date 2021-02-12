@@ -6,6 +6,9 @@ const Test = require('../controllers')
 const router = Router()
 
 
+route.get('*', (req, res) => {
+	res.sendFile(Path.join(`${__dirname}/client/build/index.html`))
+})
 
 router.get('/', Home.GetHomePage)
 
