@@ -1,14 +1,8 @@
 import Router from 'express'
+import Controller from '../controllers/index.js'
 
 const router = Router()
 
-router.get('/', (req, res) => {
-	const data = {
-		title: "HomePage",
-		header: "Welcome in MyPage",
-		footer: `Copyright@${new Date().getFullYear()}`
-	}
-	res.render('pages/home', data)
-})
+router.get('/', Controller.Home)
 
 export default router

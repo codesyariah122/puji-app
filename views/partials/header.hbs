@@ -1,1 +1,39 @@
-<h1>{{header}}</h1>
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+        	<!-- <img src="<?=base_url($brand)?>" width="70" height="60"> -->
+        	{{brand}}
+    	</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ml-auto">
+               
+               {{#each links as |data|}}
+                <li class="menu-item">
+                    <a class="nav-link" href="{{data.url}}">{{data.label}}</a>
+                </li>
+                {{/each}}
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+ <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid" style=" background-image: url('./images/forauthor3.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h1 class="display-4">
+                    {{header}}
+                </h1>
+                <a href="" class="btn btn-primary tombol">Our Work</a>
+            </div>
+        </div>
+    </div>
+    </div>
