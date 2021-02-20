@@ -1,8 +1,9 @@
 import Router from 'express'
-import Controller from '../controllers/index.js'
+import {AllDataPage} from '../controllers/index.js'
 
 const router = Router()
 
-router.get('/', Controller.Home)
+// router.get('/', DefaultPage)
+router.get('/api/alldata', AllDataPage)
 
 export default router
