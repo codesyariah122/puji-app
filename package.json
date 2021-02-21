@@ -5,11 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --experimental-json-modules index.js",
-    "server": "nodemon --experimental-json-modules index.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client" 
+    "start": "nodemon --experimental-json-modules index.js"
   },
   "keywords": [],
   "author": "",
@@ -24,11 +20,13 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-react-views": "^0.11.0",
+    "history": "^5.0.0",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1",
     "url": "^0.11.0"

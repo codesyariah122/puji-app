@@ -32,12 +32,21 @@ const reactOption = {
 	}
 }
 
+// add middleware
 app.use(BodyParser.json())
 app.use(BodyParser.urlencoded({
 	limit: "30mb",
 	extended: true
 }))
 app.use(Cors(corsOpion))
+
+app.use(Express.static('public'))
+
+app.use('/', (req, res, next) => {
+	console.log('Aplikasi berjalan... dan diteruskan ke views')
+	next()
+})
+app.use('/', Router)
 
 // views with handlebars
 // app.engine('hbs', ExpHbs({
@@ -47,16 +56,11 @@ app.use(Cors(corsOpion))
 // app.set('view engine', 'hbs')
 // app.set('views', Path.join(__dirname, 'views'))
 // views with react
-// app.engine('jsx', React.createEngine(reactOption))
-// app.set('view engine', 'jsx')
-// app.set('views', Path.join(__dirname, 'views'))
+app.engine('jsx', React.createEngine(reactOption))
+app.set('view engine', 'jsx')
+app.set('views', Path.join(__dirname, 'views'))
 
-// app.use(Express.static('public'))
-
-app.use('/', (req, res, next) => {
-	console.log('Aplikasi berjalan... dan diteruskan ke views')
-	next()
-})
-app.use('/', Router)
-
+// app.get('*', (req, res) => {
+// 	res.sendFile(Path.join(__dirname+'/client/build/index.html'))
+// })
 app.listen(PORT, ()=>console.log(`Server running on Port : ${PORT}`))

@@ -1,14 +1,19 @@
 import React from 'react'
 import Styled from 'styled-components'
+import DefaultLayout from '../../../layouts/default'
 
 const Heading = Styled.h1`
 	color: crimson;
 `
-const About = () => {
+const About = (props) => {
 	return (
+		<DefaultLayout title={props.title}>
+
 		<Heading>
-			About Page
-		</Heading>	
+			{props.header}
+		</Heading>
+
+		</DefaultLayout>	
 	)
 }
 
