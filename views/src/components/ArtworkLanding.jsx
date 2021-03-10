@@ -2,12 +2,10 @@ import React from 'react'
 
 const ArtworkLanding = () => {
 	return (
-		<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-		 width="794.000000pt" height="1123.000000pt" viewBox="0 0 794.000000 1123.000000"
-		 preserveAspectRatio="xMidYMid meet">
+		<svg id="artwork" version="1.0" xmlns="http://www.w3.org/2000/svg" width="360.000000pt" height="360.000000pt" viewBox="0 0 360.000000 360.000000" preserveAspectRatio="xMidYMid meet">
 
-		<g transform="translate(0.000000,1123.000000) scale(0.100000,-0.100000)"
-		fill="#000000" stroke="none">
+		<g transform="translate(0.000000,360.000000) scale(0.100000,-0.100000)"
+			fill="#000000" stroke="none">
 		<path d="M4392 9800 c0 -14 2 -19 5 -12 2 6 2 18 0 25 -3 6 -5 1 -5 -13z"/>
 		<path d="M4402 9735 c0 -16 2 -22 5 -12 2 9 2 23 0 30 -3 6 -5 -1 -5 -18z"/>
 		<path d="M4413 9620 c0 -25 2 -35 4 -22 2 12 2 32 0 45 -2 12 -4 2 -4 -23z"/>
