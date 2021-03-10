@@ -27,9 +27,9 @@ const HomePage = props => {
 
 		{/*landing content*/}
 
-		 <div class="section values">
-		    <div class="container">
-				<div class="row">
+		 <div className="section values">
+		    <div className="container">
+				<div className="row">
 				<Landing landing={props.landing}/>
 		      </div>
 		    </div>
