@@ -43,13 +43,13 @@
 }
 .values {
   background-size: cover;
-  color: rgba(0, 0, 255, 0.7);
+  color: rgba(0, 0, 111, 0.7);
   padding-bottom: 5rem;
   object-fit: cover;
 }
 .value-multiplier {
   margin-bottom: .5rem;
-  color: #11DFC7;
+  color: rgba(111, 111, 111, 0.9);
 }
 .value-heading {
   margin-bottom: .3rem;
