@@ -10,15 +10,15 @@ const HomePage = props => {
 	return (
 		<Fragment>
 		{/*hero content*/}
-		<div classNameName="section hero">
-		    <div classNameName="container">
-		      	<div classNameName="row">
+		<div className="section hero">
+		    <div className="container">
+		      	<div className="row">
 		      		
-		      		<div classNameName="one-half column">
+		      		<div className="one-half column">
 						<Hero label={data.label} buttonLabel={data.button.label} buttonUrl={data.button.url}/>
 					</div>
 
-					<div classNameName="one-half column phones">
+					<div className="one-half column phones">
 						<Artwork/>
 					</div>
 
@@ -30,14 +30,14 @@ const HomePage = props => {
 		 
 		 <div className="parallax">
 		 </div>
-		 <div classNameName="section values">
+		 <div className="section values">
 		 
 
-		    <div classNameName="container">
-				<div classNameName="row">
+		    <div className="container">
+				<div className="row">
 				<Landing landing={props.landing}/>
 
-					<div classNameName="one-half column phones">
+					<div className="one-half column phones">
 						<ArtworkLanding id="artwork-landing"/>
 					</div>
 		      </div>
