@@ -8,7 +8,7 @@ import { ApiRouter, WebRouter } from '../Routers/index.js'
 export const Middlewares = (app, exp) => {
 	const __dirname = dirname(fileURLToPath(import.meta.url))
 	const corsOption = {
-		origin: (process.env.CONFIG_PRODUCTION == 'true') ? process.env.PROD_ORIGIN : process.env.DEV_ORIGIN
+		origin: process.env.DEV_ORIGIN
 	}
 	const reactOption = {
 	beautify: true,
