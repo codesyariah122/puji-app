@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import Hero from '../components/Hero'
 import Artwork from '../components/Artwork'
+import ArtworkLanding from '../components/ArtworkLanding'
 import Landing from '../components/Landing'
 
 const HomePage = props => {
@@ -26,11 +27,19 @@ const HomePage = props => {
 		</div>
 
 		{/*landing content*/}
-
+		 
+		 <div class="parallax">
+		 </div>
 		 <div className="section values">
+		 
+
 		    <div className="container">
 				<div className="row">
 				<Landing landing={props.landing}/>
+
+					<div className="one-half column phones">
+						<ArtworkLanding id="artwork-landing"/>
+					</div>
 		      </div>
 		    </div>
 		  </div>

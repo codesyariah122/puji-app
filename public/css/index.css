@@ -29,12 +29,21 @@
   display: none;
 }
 
+
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.values {
+.parallax{
   background-image: url('../images/home/staticsite.png');
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  margin:0;
+}
+.values {
+  background-size: cover;
+  color: rgba(0, 0, 255, 0.7);
   padding-bottom: 5rem;
   object-fit: cover;
 }
