@@ -154,7 +154,8 @@ export const ProductData = [
 			tiga:"Digital Marketing Product",
 			empat:"Beautiful Website Design"
 		},
-		price: "Forever Free 0 k"
+		price: "- k",
+		phone: "6288222668778"
 	},
 	{
 		id:2,
@@ -169,7 +170,8 @@ export const ProductData = [
 			dua:"Fitur jurnal",
 			tiga:"Cashlink & Bank"
 		},
-		price: "Forever Free 0 k"
+		price: "- k",
+		phone: "6288222668778"
 	},
 	{
 		id:3,
@@ -185,7 +187,8 @@ export const ProductData = [
 			tiga:"Cashlink & Bank",
 			empat:"Template Design for beauiful page"
 		},
-		price: "Forever Free 0 k"
+		price: "- k",
+		phone: "6288222668778"
 	},
 	{
 		id:4,
@@ -200,7 +203,8 @@ export const ProductData = [
 			dua:"Template Design for beauiful page",
 			tiga:"Tampilkan design product terbaik anda"
 		},
-		price: "Forever Free 0 k"
+		price: "- k",
+		phone: "6288222668778"
 	},
 	{
 		id:5,
@@ -215,7 +219,8 @@ export const ProductData = [
 			dua:"Template Design for beauiful page",
 			tiga:"Tampilkan design product terbaik anda"
 		},
-		price: "Forever Free 0 k"
+		price: "- k",
+		phone: "6288222668778"
 	},
 	{
 		id:6,
@@ -230,7 +235,8 @@ export const ProductData = [
 			dua:"Template Design for beauiful page",
 			tiga:"Tampilkan design product terbaik anda"
 		},
-		price: "Forever Free 0 k"
+		price: "- k",
+		phone: "6288222668778"
 	}
 	
 ]
