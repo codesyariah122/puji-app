@@ -147,7 +147,7 @@ export const ProductData = [
 		type: "Web & Mobile Application",
 		description: "Working based on timeline",
 		tagline: "Kelola product bisnis anda",
-		detail: "Kalo selama ini anda mendapatkan kesulitan dalam memasarkan product anda. Saat ini kami akan membantu anda dalam memperluas jangkauan product anda dari sisi digital, apapun yang kami usahakan akan membantu mempercepat anda menghasilkan pundi-pundi dari product yang anda ciptakan."
+		detail: "Kalo selama ini anda mendapatkan kesulitan dalam memasarkan product anda. Saat ini kami akan membantu anda dalam memperluas jangkauan product anda dari sisi digital, apapun yang kami usahakan akan membantu mempercepat anda menghasilkan pundi-pundi dari product yang anda ciptakan.",
 		fitur: {
 			satu:"Seo Website",
 			dua:"Digital Business Logic",
@@ -163,7 +163,7 @@ export const ProductData = [
 		type: "Web, Desktop & Mobile Application",
 		description: "Working based on timeline",
 		tagline: "Mengelola asset pergudangan",
-		detail: "Dimanapun bisnis anda berkembang saat itu anda pasti akan membutuhkan sebuah system pengolahan yang powerfull bagi asset product yang anda cipta dan pasarkan, hilangkan segala bentuk keruwetan yang ada dengan aplikasi yang kami kembangkan, anda tidak perlu terlalu banyak merekrut karyawan baru, cukup mesin kami yang senantiasa melayani pekerjaan yang anda butuhkan."
+		detail: "Dimanapun bisnis anda berkembang saat itu anda pasti akan membutuhkan sebuah system pengolahan yang powerfull bagi asset product yang anda cipta dan pasarkan, hilangkan segala bentuk keruwetan yang ada dengan aplikasi yang kami kembangkan, anda tidak perlu terlalu banyak merekrut karyawan baru, cukup mesin kami yang senantiasa melayani pekerjaan yang anda butuhkan.",
 		fitur: {
 			satu:"Pembukuan berbasis web",
 			dua:"Fitur jurnal",
@@ -178,7 +178,7 @@ export const ProductData = [
 		type: "Web, Mobile Application",
 		description: "Working based on timeline",
 		tagline: "Mengelola product digital dan product fisik",
-		detail: "Tidak ada yang luput dari dunia digital hari ini, semua berkembang dalam strategi yang tidak terlihat namun efektif memberi efek bagi kualitas pemasaran product anda."
+		detail: "Tidak ada yang luput dari dunia digital hari ini, semua berkembang dalam strategi yang tidak terlihat namun efektif memberi efek bagi kualitas pemasaran product anda.",
 		fitur: {
 			satu:"Fitur Dashboard Store",
 			dua:"Fitur Inventory",
@@ -194,7 +194,7 @@ export const ProductData = [
 		type: "Web, Mobile Application",
 		description: "Working based on timeline",
 		tagline: "Mengelola content digital bisnis anda",
-		detail: "Siapkan design dan copy writter karena itu akan memberi efek bagi perusahaan anda. Product-product anda akan trending dalam jangka waktu yang tidak anda kira sebelumnya."
+		detail: "Siapkan design dan copy writter karena itu akan memberi efek bagi perusahaan anda. Product-product anda akan trending dalam jangka waktu yang tidak anda kira sebelumnya.",
 		fitur: {
 			satu:"Fitur manage content",
 			dua:"Template Design for beauiful page",
@@ -209,7 +209,7 @@ export const ProductData = [
 		type: "Web, Mobile Application",
 		description: "Working based on timeline",
 		tagline: "Mengelola content dokumentasi pribadi",
-		detail: "Bukan hanya skala bisnis yang besar atau apapun itu yang bersifat finansial dan proses data yang rentan. Pribadi pun saya rasa perlu menjalankan proses dokumentasi, terlebih bagi dokumentasi kalangan tercinta di lingkungan pribadi anda."
+		detail: "Bukan hanya skala bisnis yang besar atau apapun itu yang bersifat finansial dan proses data yang rentan. Pribadi pun saya rasa perlu menjalankan proses dokumentasi, terlebih bagi dokumentasi kalangan tercinta di lingkungan pribadi anda.",
 		fitur: {
 			satu:"Content Management System",
 			dua:"Template Design for beauiful page",
@@ -224,7 +224,7 @@ export const ProductData = [
 		type: "Web, Mobile Application",
 		description: "Working based on timeline",
 		tagline: "Membuat system stock bagi karya anda",
-		detail: "Kami rasa dunia photography pun mengalami kemajuan yang sangat signifikan seiring berkembangnya dunia digital informasi dan teknologi. Apapun itu yang berhubungan dengan Photography baik itu hoby atau sebagai komoditi bisnis anda, kami siap diajak bekerja sama untuk membuat inovasi dalam menyimpan dokumentasi photography dengan platform yang penuh warna dan inovatif."
+		detail: "Kami rasa dunia photography pun mengalami kemajuan yang sangat signifikan seiring berkembangnya dunia digital informasi dan teknologi. Apapun itu yang berhubungan dengan Photography baik itu hoby atau sebagai komoditi bisnis anda, kami siap diajak bekerja sama untuk membuat inovasi dalam menyimpan dokumentasi photography dengan platform yang penuh warna dan inovatif.",
 		fitur: {
 			satu:"Content Management System",
 			dua:"Template Design for beauiful page",
