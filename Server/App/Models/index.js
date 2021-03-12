@@ -1,4 +1,4 @@
-import {HeroContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData} from '../Configs/index.js'
+import {HeroContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData, ProductData} from '../Configs/index.js'
 
 export const getHero = () => {
 	return HeroContent
@@ -37,5 +37,14 @@ export const getProject = () => {
 
 export const getProjectByCompany = name => {
 	const row = ProjectData.find(d => d.company == name)
+	return (!row) ? [{message: `Data with name : ${name} Not Found`}] : row
+}
+
+export const getProduct = () => {
+	return ProductData
+}
+
+export const getProductById = id => {
+	const row = ProductData.find(d => d.id == id)
 	return (!row) ? [{message: `Data with name : ${name} Not Found`}] : row
 }

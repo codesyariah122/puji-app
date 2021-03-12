@@ -137,3 +137,88 @@ export const ProjectData = [
 	}
 	
 ]
+
+export const ProductData = [
+	
+	{
+		id:1,
+		name: "Web Design & Web Development",
+		type: "Web & Mobile Application",
+		description: "Working based on timeline",
+		tagline: "Kelola product bisnis anda",
+		fitur: {
+			satu:"Seo Website",
+			dua:"Digital Business Logic",
+			tiga:"Digital Marketing Product",
+			empat:"Beautiful Website Design"
+		},
+		price: "Forever Free 0 k"
+	},
+	{
+		id:2,
+		name: "Warehouse Application",
+		type: "Web, Desktop & Mobile Application",
+		description: "Working based on timeline",
+		tagline: "Mengelola asset pergudangan",
+		fitur: {
+			satu:"Pembukuan berbasis web",
+			dua:"Fitur jurnal",
+			tiga:"Cashlink & Bank"
+		},
+		price: "Forever Free 0 k"
+	},
+	{
+		id:3,
+		name: "Online Store",
+		type: "Web, Mobile Application",
+		description: "Working based on timeline",
+		tagline: "Mengelola product digital dan product fisik",
+		fitur: {
+			satu:"Fitur Dashboard Store",
+			dua:"Fitur Inventory",
+			tiga:"Cashlink & Bank",
+			empat:"Template Design for beauiful page"
+		},
+		price: "Forever Free 0 k"
+	},
+	{
+		id:4,
+		name: "Web Promotion",
+		type: "Web, Mobile Application",
+		description: "Working based on timeline",
+		tagline: "Mengelola content digital bisnis anda",
+		fitur: {
+			satu:"Fitur manage content",
+			dua:"Template Design for beauiful page",
+			tiga:"Tampilkan design product terbaik anda"
+		},
+		price: "Forever Free 0 k"
+	},
+	{
+		id:5,
+		name: "Bloging Website",
+		type: "Web, Mobile Application",
+		description: "Working based on timeline",
+		tagline: "Mengelola content dokumentasi pribadi",
+		fitur: {
+			satu:"Content Management System",
+			dua:"Template Design for beauiful page",
+			tiga:"Tampilkan design product terbaik anda"
+		},
+		price: "Forever Free 0 k"
+	},
+	{
+		id:6,
+		name: "Web Photography Stock",
+		type: "Web, Mobile Application",
+		description: "Working based on timeline",
+		tagline: "Membuat system stock bagi karya anda",
+		fitur: {
+			satu:"Content Management System",
+			dua:"Template Design for beauiful page",
+			tiga:"Tampilkan design product terbaik anda"
+		},
+		price: "Forever Free 0 k"
+	}
+	
+]

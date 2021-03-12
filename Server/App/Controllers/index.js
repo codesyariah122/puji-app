@@ -1,4 +1,4 @@
-import { getHero, getLanding, getLandingById, getPolaroid, getPolaroidById, getParallax, getParallaxById, getProject, getProjectByCompany} from '../Models/index.js'
+import { getHero, getLanding, getLandingById, getPolaroid, getPolaroidById, getParallax, getParallaxById, getProject, getProjectByCompany, getProduct, getProductById} from '../Models/index.js'
 
 export const getHome = (req, res) => {
 	const data = {
@@ -91,6 +91,31 @@ export const parallaxContentById = async(req, res) => {
 	try{
 		res.status(200).json({
 			data: await getParallaxById(id)
+		})
+	}catch(err){
+		res.status(404).json({
+			message: err.message
+		})
+	}	
+}
+
+export const productData = async(req, res) => {
+	try{
+		res.status(200).json({
+			data: await getProduct()
+		})
+	}catch(err){
+		res.status(404).json({
+			message: err.message
+		})
+	}	
+}
+
+export const productDataById = async(req, res) => {
+	const id = req.params.id
+	try{
+		res.status(200).json({
+			data: await getProductById(id)
 		})
 	}catch(err){
 		res.status(404).json({

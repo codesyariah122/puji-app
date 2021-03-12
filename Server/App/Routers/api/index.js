@@ -1,5 +1,5 @@
 import Router from 'express'
-import {heroContent, landingContent, landingContentById, polaroidContent, polaroidContentById, parallaxContent, parallaxContentById, projectContent, projectContentByCompany} from '../../Controllers/index.js'
+import {heroContent, landingContent, landingContentById, polaroidContent, polaroidContentById, parallaxContent, parallaxContentById, projectContent, projectContentByCompany, productData, productDataById} from '../../Controllers/index.js'
 
 const ApiRouter = Router()
 
@@ -16,6 +16,9 @@ ApiRouter.get('/parallax/show/id/:id', parallaxContentById)
 
 ApiRouter.get('/project/show', projectContent)
 ApiRouter.get('/project/show/company/:name', projectContentByCompany)
+
+ApiRouter.get('/product/show', productData)
+ApiRouter.get('/product/show/id/:id', productDataById)
 
 
 export default ApiRouter
