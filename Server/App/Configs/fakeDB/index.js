@@ -142,6 +142,7 @@ export const ProductData = [
 	
 	{
 		id:1,
+		img_path:"puji2.jpg",
 		name: "Web Design & Web Development",
 		type: "Web & Mobile Application",
 		description: "Working based on timeline",
@@ -156,6 +157,7 @@ export const ProductData = [
 	},
 	{
 		id:2,
+		img_path:"space1.jpg",
 		name: "Warehouse Application",
 		type: "Web, Desktop & Mobile Application",
 		description: "Working based on timeline",
@@ -169,6 +171,7 @@ export const ProductData = [
 	},
 	{
 		id:3,
+		img_path:"space2.png",
 		name: "Online Store",
 		type: "Web, Mobile Application",
 		description: "Working based on timeline",
@@ -183,6 +186,7 @@ export const ProductData = [
 	},
 	{
 		id:4,
+		img_path:"space3.png",
 		name: "Web Promotion",
 		type: "Web, Mobile Application",
 		description: "Working based on timeline",
@@ -196,6 +200,7 @@ export const ProductData = [
 	},
 	{
 		id:5,
+		img_path:"space4.jpg",
 		name: "Bloging Website",
 		type: "Web, Mobile Application",
 		description: "Working based on timeline",
@@ -209,6 +214,7 @@ export const ProductData = [
 	},
 	{
 		id:6,
+		img_path:"space5.jpg",
 		name: "Web Photography Stock",
 		type: "Web, Mobile Application",
 		description: "Working based on timeline",
