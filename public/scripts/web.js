@@ -76,7 +76,7 @@ new Vue({
 			fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`)
 			.then(res => res.json())
 			.then(res => {
-				// console.log(res)
+				console.log(res)
 				this.temp = this.getCelcius(res.main.temp) + '&deg;C'
 				this.feelsLike = this.getCelcius(res.main.feels_like) + '&deg;C'
 				this.weathers = res.weather
