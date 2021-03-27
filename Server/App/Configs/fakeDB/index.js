@@ -2,7 +2,7 @@ export const PanelContent = [
 	{
 		id: 1,
 		title: 'Script Again Coffee Again',
-		description:'Ini adalah sebuah web blog dan landing page bagi project website yang akan saya kembangkan bagi kebutuhan clien. Web Project ini saya create secara mandiri beserta seluruh konten yang terdapat dalam website project ini. Website project ini merupakan hasil karya pribadi saya dalam memperluas khazanah dalam dunia teknologi informasi, tiap konten yang disajikan merupakan sumber yang telah saya riset dengan acuan-acuan yang telah saya telusuri di ranah informasi digital.',
+		description:'Ini adalah sebuah karya digital saya, berupa sebuah web blog dan landing project website yang akan saya kembangkan bagi kebutuhan dan permintaan client. Web Project ini saya create secara mandiri beserta seluruh konten yang terdapat dalam website project ini. Website project ini merupakan hasil karya pribadi saya yang awalnya saya tujukan guna memperluas khazanah pribadi saya dalam menelusuri dunia teknologi informasi, tiap konten yang disajikan merupakan sumber yang telah saya riset dengan acuan-acuan yang telah saya telusuri di ranah informasi digital.',
 		image:'/images/home/story14.jpg',
 		link: 'https://codesyariah122.github.io/project',
 		anim: '/images/home/vector1.gif'
