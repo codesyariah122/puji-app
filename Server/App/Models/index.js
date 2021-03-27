@@ -1,7 +1,11 @@
-import {HeroContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData, ProductData} from '../Configs/index.js'
+import {HeroContent, PanelContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData, ProductData} from '../Configs/index.js'
 
 export const getHero = () => {
 	return HeroContent
+}
+
+export const getPanel = () => {
+	return PanelContent
 }
 
 export const getLanding = () => {

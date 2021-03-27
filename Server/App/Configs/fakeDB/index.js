@@ -1,3 +1,28 @@
+export const PanelContent = [
+	{
+		id: 1,
+		title: 'Script Again Coffee Again',
+		description:'Ini adalah sebuah web blog dan landing page bagi project website yang akan saya kembangkan bagi kebutuhan clien. Web Project ini saya create secara mandiri beserta seluruh konten yang terdapat dalam website project ini. Website project ini merupakan hasil karya pribadi saya dalam memperluas khazanah dalam dunia teknologi informasi, tiap konten yang disajikan merupakan sumber yang telah saya riset dengan acuan-acuan yang telah saya telusuri di ranah informasi digital.',
+		image:'/images/home/story14.jpg',
+		link: 'https://codesyariah122.github.io/project',
+		anim: '/images/home/vector1.gif'
+	},
+	{
+		id: 2,
+		title: 'Portfolio Website',
+		description:'Ini merupakan halaman portfolio website saya yang sekaligus sebagai sarana media unuk dokumentasi pribadi dalam mengingat-ingat ilmu yang dari pada terbuang percuma dan dilupakan maka dari itu saya jadikan sebuah dokumentasi berupa konten blog dan artikel seputar hoby dan profesi pekerjaan yang sedang di geluti.',
+		image:'/images/home/story7.jpg',
+		link: 'https://pujiermanto.vercel.app/resume'
+	},
+	{
+		id: 3,
+		title: 'Inovasi Tak Bertulang',
+		description:'Memang saat ini inovasi adalah sesuatu yang lunak dan lentur, hampir telah menyentuh beraneka ragam segmentasi gender, usia, dan budaya. Setiap partial akan terus terhubung membungkus sebuah entitas budaya, produk baru yang dapat dimanfaatkan oleh pihak lain. Dan menjadi struktur fundamental bagi perkembangan khazanah ilmiah generasi mendatang.',
+		image:'/images/home/story20.jpg',
+		link: 'https://pujiermanto.netlify.app'
+	}
+]
+
 export const HeroContent = [
 	
 	{

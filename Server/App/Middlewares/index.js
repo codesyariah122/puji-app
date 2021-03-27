@@ -5,8 +5,10 @@ import path, {dirname} from 'path'
 import {fileURLToPath} from 'url'
 import React from 'express-react-views'
 import { ApiRouter, WebRouter } from '../Routers/index.js'
+import ExpHbs from 'express-handlebars'
+import hbsHelper from '../helpers/hbsHelper.js'
 
-export const Middlewares = (app, exp) => {
+export const Middlewares = (app, express) => {
 	let allowLists = [process.env.DEV_ORIGIN, process.env.PROD_ORIGIN]
 
 	const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -15,33 +17,40 @@ export const Middlewares = (app, exp) => {
 		origin: process.env.DEV_ORIGIN
 	}
 
-	const reactOption = {
-	beautify: true,
-		babel: {
-			presets: [
-				'@babel/preset-react', 
-				[ '@babel/preset-env', 
-					{'targets': 
-						{
-							'node': 'current'
-						}
-					}
-				]
-			]
-		}
-	}
+	// for express react views (jsx)
+	// const reactOption = {
+	// beautify: true,
+	// 	babel: {
+	// 		presets: [
+	// 			'@babel/preset-react', 
+	// 			[ '@babel/preset-env', 
+	// 				{'targets': 
+	// 					{
+	// 						'node': 'current'
+	// 					}
+	// 				}
+	// 			]
+	// 		]
+	// 	}
+	// }
+	// app.engine('jsx', React.createEngine(reactOption))
+	// app.set('view engine', 'jsx')
+	app.engine('hbs', ExpHbs({
+		defaultLayout: 'main',
+		extname: 'hbs',
+		helpers: hbsHelper
+	}))
+	app.use('/api/data', ApiRouter)
+	app.set('view engine', 'hbs')
 
 
 	app.use(cors())
 	// corsOptions()
 	app.use(bodyParser.json())
 	app.use(bodyParser.urlencoded({extended: true}))
-	app.use(exp.static('public'))
+	app.use(express.static('public'))
 	
 	app.use('/', WebRouter)
-	app.use('/api/data', ApiRouter)
 
-	app.engine('jsx', React.createEngine(reactOption))
-	app.set('view engine', 'jsx')
 	app.set('views', path.join(__dirname, 'views'))
 }

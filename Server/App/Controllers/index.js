@@ -1,15 +1,38 @@
-import { getHero, getLanding, getLandingById, getPolaroid, getPolaroidById, getParallax, getParallaxById, getProject, getProjectByCompany, getProduct, getProductById} from '../Models/index.js'
+import { getHero, getPanel, getLanding, getLandingById, getPolaroid, getPolaroidById, getParallax, getParallaxById, getProject, getProjectByCompany, getProduct, getProductById} from '../Models/index.js'
+
+function NavMenu() {
+	const dataMenu = [
+		{label: 'Home', url: '/'},
+		{label: 'Contact', url: '/contact'}
+	]
+	return dataMenu
+}
 
 export const getHome = (req, res) => {
 	const data = {
 		title: "A dead Simple",
 		description: "Puji Ermanto as a Web Developer",
 		author: "Puji Ermanto",
+		header: "My Header Page",
+		navs: NavMenu(),
+		footer: "My Footer Page",
 		hero: getHero(),
-		landing: getLanding()
+		landing: getLanding(),
+		panel: getPanel()
 	}
 
-	res.render('index', data)
+	res.render('pages/home', data)
+}
+
+export const getContact = (req, res) => {
+	res.status(200).json({
+		message: 'Masih dalam pengembangan bradeurrqu ... still wait lah !',
+		data: {
+			listApi: {
+				ExampleProduct: 'https://puji-app.herokuapp.com/api/data/product/show',
+			}
+		}
+	})
 }
 
 export const heroContent = async(req, res) => {

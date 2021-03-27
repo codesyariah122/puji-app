@@ -1,0 +1,409 @@
+@font-face {
+  font-family: "SpringSakura";
+  src: local("SpringSakura"), url("https://codesyariah122.github.io/assets/fonts/SpringSakura-3z1m8.woff") format("woff");
+}
+@font-face {
+  font-family: "Reey Regular";
+  src: local("Reey Regular"), url("https://codesyariah122.github.io/assets/fonts/Reey-Regular.woff") format("woff");
+}
+.navbar{
+  position: relative;
+  z-index:1;
+}
+
+.transparent-nav{
+  background : rgba(255,255,255, 1);
+  margin-top: .5rem;
+}
+
+.transition{
+  transition: background-color 0.5s ease;
+  background : rgba(255, 255, 255, 0.5);
+  position: fixed;
+  margin-top: -.5rem;
+  z-index: 1;
+  width:100%;
+}
+
+.white{
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+/* Utility */
+.tombol {
+  text-transform: uppercase;
+  border-radius: 40px !important;
+  font-family:'Lemon/Milk Regular';
+  font-weight:normal;
+  font-size:42px;
+}
+
+/* jumbotron */
+.jumbotron-content {
+  /* background-size: cover;
+  height: 540px; */
+  text-align: center;
+  position: relative;
+  background-color: #17234E;
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+.jumbotron-content .container {
+  z-index: 1;
+  position: relative;
+}
+
+.jumbotron-content::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: 0;
+  /*margin-left: -0.7rem;*/
+}
+
+.jumbotron-content .display-4 {
+  color: white;
+  text-align: center;
+  margin-top: 15rem;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.jumbotron-content .display-4 span {
+  font-weight: 500;
+  color: tomato;
+}
+
+.jumbotron-content p {
+  font-weight: 500;
+  font-size: 35px;
+  color: #FFFFF0;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+}
+
+/*panel*/
+.panel{
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  margin-top: -5rem;
+  padding: 12px;
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: justify-content-center;
+  width: 100%;
+}
+.panel-body {
+  margin-top: 1rem;
+  padding: 15px;
+}
+.panel-body img{
+  width: 250px;
+  height: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);border-radius:0%;
+}
+.panel-body h1{
+  margin-top: 2rem;
+}
+.panel-body p{
+  line-height: 25px;
+  font-size: 14px;
+  text-indent: 21px;
+  text-align: justify;
+}
+.panel-body a {
+  margin-left: 5rem;
+}
+.panel-body .anim{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+/*end panel;*/
+
+/* info-panel */
+.info-panel{
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  margin-top: -100px;
+  background-color: white;
+  padding: 30px;
+}
+
+.info-panel img{
+  height: 95px;
+  width: 100px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.info-panel h4{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.info-panel p {
+  font-size: 12px;
+  color: #ACACAC;
+  margin-top: -5px;
+  font-weight: 200;
+}
+
+/* content page */
+/* polaroid */
+.polaroid{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top:5rem;
+}
+.weather{
+ width: 150px;
+ height: 150px;
+ margin-top: -1rem
+}
+.polaroid-vector{
+  width: 300px;
+  height: 350px;
+  margin-top: 1rem;
+}
+.polaroid-body p{
+  padding: 15px;
+  color:black;
+  font-family: 'Poiret One', cursive;font-weight:bold;
+  font-size: 25px; 
+}
+
+.polaroid-body h2{
+  padding: 25px;
+  color:black;
+  font-family: 'Poiret One', cursive;font-weight:bold;
+  font-size: 25px;
+}
+/* end polaroid */
+
+.websiteku{
+  text-transform: uppercase;
+  color: tomato;
+  font-family:'Lemon/Milk Regular';
+}
+
+
+.underline:after{
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  position: relative;
+  margin-bottom:2rem;
+  width: 100px;
+  height: 2px;
+  background:rgb(255, 99, 78);
+}
+
+
+.parallax{
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:0;
+}
+
+.caption {
+  background:rgba(255,255,255,0.3);
+  /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+  position: absolute;
+  margin-top: 17rem;
+  width: 50%;
+  text-align: center;
+  color: #000;
+}
+.caption h2 {
+  font-family: 'Poiret One', cursive;font-weight:bold;
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: .9rem;
+  font-size: 21px;
+}
+.caption a{
+  font-size: 18px;
+}
+
+
+@media only screen and (max-device-width: 812px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) { 
+  /* navbar */
+  .navbar-brand, .nav-link {
+    color: white !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+  .nav-link{
+    text-transform: uppercase;
+    margin-right: 30px;
+  }
+  .nav-link:hover::after{
+    content:'';
+    display: block;
+    border-bottom: 3px solid #0B63DC;
+    width: 50%;
+    margin:auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+
+  .transition{
+    transition: background-color 0.5s ease;
+    background : rgba(0, 0, 0, 0.3);
+    position: fixed;
+    margin-top: -.5rem;
+    width:100%;
+  }
+  .transparent-nav{
+    background : rgba(0, 0, 0, 0.3);
+    margin-top: -.5rem;
+  }
+  /* jumbotron */
+  .jumbotron{
+    margin-top: -75px;
+    height: 840px;
+  }
+  .jumbotron .display-4{
+    text-transform: capitalize;
+  }
+
+  /*panel*/
+  .panel{
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: -5rem;
+    padding: 12px;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: justify-content-center;
+    width: 100%;
+  }
+  .panel-body {
+    margin-top: 1rem;
+    padding: 15px;
+  }
+  .panel-body img{
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);border-radius:0%;
+  }
+  .panel-body h1{
+    margin-left: 3rem;
+    font-family: 'SpringSakura';
+  }
+  .panel-body p{
+    margin-left: 5rem !important;
+    font-size: 16px;
+    text-align: justify;
+  }
+  .panel-body a {
+    margin-left: 5rem;
+  }
+  .panel-body .anim{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-left: 3rem;
+  }
+  /*end panel;*/
+  /* content */
+  .polaroid{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+    color: rgba(0,0,0,0.7);
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top:2rem;
+  }
+
+  .polaroid-body h2{
+    padding: 15px;
+    color:black;
+    font-family: 'Poiret One', cursive;font-weight:bold;
+    font-size: 25px;
+  }
+
+  .polaroid-body p{
+    padding: 15px;
+    color:black;
+    font-family: 'Poiret One', cursive;font-weight:bold;
+    font-size: 25px; 
+  }
+
+  .weather{
+    width: 150px;
+    height: 150px;
+    margin-top: -1rem;
+  }
+  .polaroid-vector{
+    width: 500px;
+    height: 400px;
+    margin-top: 1rem;
+  }
+
+  /* all parallax top and bottom */
+  .parallax{
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+  }
+
+  .caption {
+    background:rgba(255,255,255,0.9);
+    /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+    position: absolute;
+    margin-top: 17rem;
+    width: 70%;
+    margin-left: -2rem;
+    text-align: center;
+    color: #000;
+  }
+  .caption h2 {
+    font-family: 'Poiret One', cursive;font-weight:bold;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: .9rem;
+    font-size: 41px;
+  }
+  .caption a{
+    font-size: 18px;
+  }
+
+
+}
+
+@media screen and (max-width: 760px) {
+   ul.navbar-nav li.nav-item{display: block;}
+}
+

@@ -1,0 +1,140 @@
+<div id="home">
+	<div class="jumbotron jumbotron-fluid jumbotron-content" :style="jumbotron.style">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-xs-12 col-sm-12">
+					<h1 class="display-4 text-center" style='font-family:SpringSakura;' v-html="home.title"></h1>
+					<p class="blockquote-text" style="font-size: 18px; font-family:Reey Regular;color: salmon;">
+						Puji Ermanto <span style="font-family:'Poiret One'; font-size: 21px; color: white;">Landing Page</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h1 class="underline mt-3 mb-3"></h1>
+
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6 col-xs-12 col-sm-12">
+				<div class="polaroid">
+					<img :src="home.polaroid.image" alt="" class="img-responsive mt-3 polaroid-vector">
+					<div class="polaroid-body">
+						<h2 v-html="home.polaroid.title"></h2>
+						<div class="row justify-content-center">
+							<div class="col-md-4 col-xs-12 col-sm-12">
+								<div v-for="weather in weathers">
+									<img class="img-responsive mt-3 weather" :src="`http://openweathermap.org/img/wn/${weather.icon}@4x.png`">
+								</div>
+							</div>
+							<div class="col-md-3 mt-5">
+								<h2 v-html="temp" :style="polaroidWeather.style"></h2>
+								<details style="font-size: 16px;">
+									<summary>Feels Like</summary>
+									<blockquote v-html="feelsLike" class="blockquote-footer">
+									</blockquote>
+									<div v-for="weather in weathers">
+										<blockquote class="blockquote-footer" v-html="weather.main"></blockquote>
+									</div>
+								</details>
+							</div>
+						</div>
+						<p v-html="home.polaroid.context"></p>
+					</div>	
+				</div>
+			</div>
+
+			<details class="mb-5" style="width: 100%;">
+				<summary style="width: 100%;">Detail lokasimu</summary>
+				<ul style="list-style:none;">
+					<li v-html="`${result.city} | ${result.region}`"></li>
+					<li v-html="result.ip"></li>
+					<li><img :src="`https://www.countryflags.io/${result.country_code}/shiny/64.png`"></li>
+				</ul>
+			</details>
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe width="600" height="400" frameborder="0" scrolling="yes" marginheight="0" marginwidth="10" src="https://www.openstreetmap.org/export/embed.html?bbox=107.24544525146484%2C-7.040586689891008%2C107.62859344482422%2C-6.844623671722899&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a :href="map">View Larger Map</a></small>
+			</div>
+
+		</div>
+	</div>
+
+	<h1 class="underline mt-3 mb-3"></h1>
+
+	<div class="parallax" :style="parallax.style">
+		<div class="caption">
+			<br/><br/>
+			<h2 style='font-family:SpringSakura;' v-html="parallax.developer.capt"></h2>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-12 col-xs-12 col-sm-12">
+
+				<div class="panel panel-default">  
+					<div class="panel-body">
+						<!-- container on panel-body -->
+						<div class="container">
+							{{#each panel}}
+							<!-- row content1 -->
+							<div class="row">
+								{{!-- {{#if_cond id 2}} {{id}} Ganjil {{else}} Genap {{/if_cond}} --}}
+
+								{{#if_cond id 2}}
+								<div class="col-md-4 col-xs-12 col-sm-12">
+									<img src="{{image}}" alt="{{title}}" class="float-left img-responsive"/>
+								</div>
+								<div class="col-md-6 col-xs-12 col-sm-12 content">
+									<h1 class="underline text-center">
+										{{title}}
+									</h1>
+									<p class="ml-1">
+										{{description}}
+									</p>
+									<a class="btn btn-outline-info btn-lg mb-3" href="{{link}}">Kunjungi</a>
+
+									<br><br>
+									{{#if anim}}
+										<img src="{{anim}}" class="anim">
+										<h1 class="underline mt-5 mb-5 text-center"></h1>
+									{{/if}}
+
+								</div>
+
+								{{else}}
+								<div class="col-md-6 col-xs-12 col-sm-12">
+									<h1 class="underline text-center">
+										{{title}}
+									</h1>
+									<p class="ml-1">
+										{{description}}
+									</p>
+									<a class="btn btn-outline-info btn-lg" href="{{link}}">Kunjungi</a>
+								</div>
+								<div class="col-md-6 col-xs-12 col-sm-12 content">
+									<img src="{{image}}" alt="{{title}}" class="img-responsive"/>
+								</div>
+								{{/if_cond}}
+
+							</div>
+							{{/each}}
+							<!-- row content1 end -->
+						</div>
+						<!-- end container panel-body -->
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<br>
+
+	<h1 class="underline mt-2 mb-5 text-center"></h1>
+
+</div>
+
+
+

@@ -1,168 +1,140 @@
-/* Shared
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button {
-  border-radius: 100px;
+/*.transition{
+  color:#fff;
+  transition: background-color 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.7);
+}*/
+.puji{
+  color: coral;
 }
-
-/* Sections
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.section {
-  padding: 8rem 0 7rem;
-  text-align: center;
-}
-.section-heading,
-.section-description {
-  margin-bottom: 1.2rem;
-}
-
-/* Hero
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.phones {
-  position: relative;
-}
-.phone {
-  position: relative;
-  max-width: 80%;
-  margin: 3rem auto -12rem;
-}
-.phone + .phone {
-  display: none;
-}
-
-
-/* Values
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .parallax{
-  background-image: url('../images/home/staticsite.png');
-  min-height: 500px; 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin:0;
-}
-.values {
-  background-size: cover;
-  color: rgba(0, 0, 111, 0.7);
-  padding-bottom: 5rem;
-  object-fit: cover;
-}
-.value-multiplier {
-  margin-bottom: .5rem;
-  color: rgba(111, 111, 111, 0.9);
-}
-.value-heading {
-  margin-bottom: .3rem;
-}
-.value-description {
-  opacity: .8;
-  font-weight: 300;
-}
-
-#artwork{
-  width: 100%;
-}
-
-.button-secondary{
-  color: rgba(111, 111, 111, 0.7);
-}
-/* Help
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.get-help {
-  border-bottom: 1px solid #ddd;
-}
-
-/* Categories
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.categories {
-  background-image: url('../images/values-bg.jpg');
-  background-size: cover;
-  color: #fff;
-}
-.categories .section-description { 
-  margin-bottom: 4rem;
-}
-
-/* Bigger than 550 */
-@media (min-width: 550px) {
-  .section {
-    padding: 12rem 0 11rem;
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
   }
-  .hero {
-    padding-bottom: 12rem;
-    text-align: left;
-    height: 165px;
+  .caption {
+      background:rgba(255,255,255,0.4);
+      /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+      position: absolute;
+      left: 21rem;
+      margin-top: 7rem;
+      width: 50%;
+      text-align: center;
+      color: #000;
   }
-  .phone {
-    position: absolute;
-    top: -7rem;
-    right: 3rem;
-    max-height: 362px;
-    z-index: 3;
+  .caption h2 {
+      color: white;
+      font-family: 'Poiret One', cursive;font-weight:bold;
+      text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+      margin-bottom: .9rem;
   }
-  .phone + .phone {
-    top: -6rem;
-    display: block;
-    max-width: 73.8%;
-    right: 0;
-    z-index: 2;
-    max-height: 338px;
+  .caption a{
+      font-size: 18px;
   }
-  .hero-heading {
-    font-size: 2.4rem;
+  
+  /* wave */
+  .box-wave {
+      width: 350px;
+      height: 500px;
+      border-radius: 5px;
+      box-shadow: 0 2px 30px rgba(black, .2);
+      background: lighten(#f0f4c3, 10%);
+      position: relative;
+      overflow: hidden;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .wave {
+      opacity: .4;
+      position: absolute;
+      top: 3%;
+      left: 50%;
+      background: #0af;
+      width: 500px;
+      height: 500px;
+      margin-left: -250px;
+      margin-top: -250px;
+      transform-origin: 50% 48%;
+      border-radius: 43%;
+      animation: drift 3000ms infinite linear;
+    }
+    
+    .wave.-three {
+      animation: drift 5000ms infinite linear;
+    }
+    
+    .wave.-two {
+      animation: drift 7000ms infinite linear;
+      opacity: .1;
+      background: yellow;
+    }
+    
+    .box-wave:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+      z-index: -1;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .title-wave {
+      position: absolute;
+      left: 1rem;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      line-height: 300px;
+      text-align: left;
+      transform: translate3d(0, 0, 0);
+      color: white;
+      font-weight: bold;;
+      text-transform: uppercase;
+      font-family: 'Poiret One', cursive;
+      letter-spacing: .4em;
+      font-size: 14px;
+      text-shadow: 0 1px 0 rgba(black, .1);
+    }
+    .titl-wave a{
+        margin-left: 2rem;
+    }
+  
+  @keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
   }
-}
-
-/* Bigger than 750 */
-@media (min-width: 750px) {
-  .hero {
-    height: 190px;
+  
+  
+  @media only screen and (max-device-width: 812px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+    .caption {
+        position: absolute;
+        left: 0;
+        margin-top: 2rem;
+        width: 100%;
+        text-align: center;
+        color: #000;
+    }
+    .caption h2 {
+        color: white;
+        font-family: 'Poiret One', cursive;font-weight:bold;
+        text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+        margin-bottom: .9rem;
+        font-size:14px;
+    }
+    .caption a{
+        font-size: 12px;
+    }
+  
+    .waves {
+            height: 40px;
+            min-height: 40px;
+      }
   }
-  .hero-heading {
-    font-size: 2.6rem;
-  }
-  .section {
-    padding: 14rem 0 15rem;
-  }
-  .hero {
-    padding: 16rem 0 14rem;
-  }
-  .section-description {
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .phone {
-    top: -14rem;
-    right: 5rem;
-    max-height: 510px;
-  }
-  .phone + .phone {
-    top: -12rem;
-    max-height: 472px;
-  }
-  .categories {
-    padding: 15rem 0 8rem;
-  }
-}
-
-/* Bigger than 1000 */
-@media (min-width: 1000px) {
-  .section {
-    padding: 20rem 0 19rem;
-  }
-  .hero {
-    padding: 22rem 0;
-  }
-  .hero-heading {
-    font-size: 3.0rem;
-  }
-  .phone {
-    top: -16rem;
-    max-height: 615px;
-  }
-  .phone + .phone {
-    top: -14rem;
-    max-height: 570px;
-  }
-}
