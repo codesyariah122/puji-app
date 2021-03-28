@@ -73,6 +73,11 @@ export const PolaroidContent = [
 		id: 2,
 		img: "sayhalo1.gif",
 		content: "Menunduk tak cukup tanpa ilmu, raihlah dalam luasnya ilmu" 
+	},
+	{
+		id: 3,
+		img: 'sayhalo1.gif',
+		content: 'Selamat datang <br/> perkenalkan saya <span class="puji">Puji Ermanto</span> dan ini merupakan landing page saya,<span style="font-family:SpringSakura;">|</span> <br/>salam kenal.'
 	}
 
 ];

@@ -21,7 +21,20 @@
 					<img :src="home.polaroid.image" alt="" class="img-responsive mt-3 polaroid-vector">
 					<div class="polaroid-body">
 						<h2 v-html="home.polaroid.title"></h2>
-						<div class="row justify-content-center">
+						<p v-html="home.polaroid.context"></p>
+					</div>	
+				</div>
+			</div>
+
+			<details class="mb-5" style="width: 100%;">
+				<summary style="width: 100%;">Detail lokasimu</summary>
+				<ul style="list-style:none;">
+					<li v-html="`${result.city} | ${result.region}`"></li>
+					<li v-html="result.ip"></li>
+					<li><img :src="`https://www.countryflags.io/${result.country_code}/shiny/64.png`"></li>
+				</ul>
+
+				<div class="row justify-content-center">
 							<div class="col-md-4 col-xs-12 col-sm-12">
 								<div v-for="weather in weathers">
 									<img class="img-responsive mt-3 weather" :src="`http://openweathermap.org/img/wn/${weather.icon}@4x.png`">
@@ -39,18 +52,8 @@
 								</details>
 							</div>
 						</div>
-						<p v-html="home.polaroid.context"></p>
-					</div>	
-				</div>
-			</div>
 
-			<details class="mb-5" style="width: 100%;">
-				<summary style="width: 100%;">Detail lokasimu</summary>
-				<ul style="list-style:none;">
-					<li v-html="`${result.city} | ${result.region}`"></li>
-					<li v-html="result.ip"></li>
-					<li><img :src="`https://www.countryflags.io/${result.country_code}/shiny/64.png`"></li>
-				</ul>
+
 			</details>
 			<div class="embed-responsive embed-responsive-16by9">
 				<iframe width="600" height="400" frameborder="0" scrolling="yes" marginheight="0" marginwidth="10" src="https://www.openstreetmap.org/export/embed.html?bbox=107.24544525146484%2C-7.040586689891008%2C107.62859344482422%2C-6.844623671722899&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a :href="map">View Larger Map</a></small>

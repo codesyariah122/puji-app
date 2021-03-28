@@ -40,16 +40,15 @@ export const Middlewares = (app, express) => {
 		extname: 'hbs',
 		helpers: hbsHelper
 	}))
-	app.use('/api/data', ApiRouter)
 	app.set('view engine', 'hbs')
-
-
+	
+	// Cors
 	app.use(cors())
-	// corsOptions()
 	app.use(bodyParser.json())
 	app.use(bodyParser.urlencoded({extended: true}))
 	app.use(express.static('public'))
-	
+	// Router
+	app.use('/api/data', ApiRouter)
 	app.use('/', WebRouter)
 
 	app.set('views', path.join(__dirname, 'views'))

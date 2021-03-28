@@ -18,21 +18,35 @@ export const getHome = (req, res) => {
 		footer: "My Footer Page",
 		hero: getHero(),
 		landing: getLanding(),
-		panel: getPanel()
+		panel: getPanel(),
+		prod: process.env.CONFIG_PRODUCTION
 	}
 
 	res.render('pages/home', data)
 }
 
 export const getContact = (req, res) => {
-	res.status(200).json({
-		message: 'Masih dalam pengembangan bradeurrqu ... still wait lah !',
-		data: {
-			listApi: {
-				ExampleProduct: 'https://puji-app.herokuapp.com/api/data/product/show',
-			}
-		}
-	})
+	const data = {
+		title: "A dead Simple",
+		description: "Puji Ermanto as a Web Developer",
+		author: "Puji Ermanto",
+		header: "My Contact Page",
+		navs: NavMenu(),
+		footer: "My Footer Page",
+		hero: getHero(),
+		landing: getLanding(),
+		panel: getPanel(),
+		prod: process.env.CONFIG_PRODUCTION
+	}
+	res.render('pages/contact', data)
+	// res.status(200).json({
+	// 	message: 'Masih dalam pengembangan bradeurrqu ... still wait lah !',
+	// 	data: {
+	// 		listApi: {
+	// 			ExampleProduct: 'https://puji-app.herokuapp.com/api/data/product/show',
+	// 		}
+	// 	}
+	// })
 }
 
 export const heroContent = async(req, res) => {
