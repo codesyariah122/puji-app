@@ -3,9 +3,17 @@ import { getViewer, getMenu, getHero, getPanel, getLanding, getLandingById, getP
 // For web router data
 export const getHome = (req, res) => {
 	const data = {
+		baseurl: process.env.BASE_URL,
 		title: "A dead Simple",
 		description: "Puji Ermanto as a Web Developer",
 		author: "Puji Ermanto",
+		keyword: "Puji Ermanto Landing Page",
+		og: {
+			title: "Puji Ermanto LandingPage",
+			desc: "Halo , ini adalah landing page saya barangkali ada yang berminat mengajak saya untuk gabung di project kalian, saya siap dengan bergabung di project kalian.",
+			url: "https://pujiermanto.netlify.app",
+			image: "/images/home/vector1.gif"
+		},
 		header: "My Header Page",
 		navs: getMenu(),
 		footer: "My Footer Page",
@@ -23,6 +31,7 @@ export const getContact = (req, res) => {
 		title: "A dead Simple",
 		description: "Puji Ermanto as a Web Developer",
 		author: "Puji Ermanto",
+		keyword: "I Love You When You Love Me, Where gonna make a big familly",
 		header: "My Contact Page",
 		navs: NavMenu(),
 		footer: "My Footer Page",

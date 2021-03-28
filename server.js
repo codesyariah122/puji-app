@@ -4,8 +4,9 @@ import {logViewer} from './Server/App/helpers/logViewer.js'
 
 dotenv.config()
 
-const PORT = process.env.PORT
+const port = process.env.PORT
+const baseurl = process.env.BASE_URL
 
 logViewer()
 
-Server(PORT)
+Server(port, baseurl)
