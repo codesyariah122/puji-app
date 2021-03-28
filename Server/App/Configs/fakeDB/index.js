@@ -1,3 +1,8 @@
+export const DataMenu = [
+	{label: 'Home', url: '/'},
+	{label: 'Contact', url: '/contact'}
+]
+
 export const PanelContent = [
 	{
 		id: 1,

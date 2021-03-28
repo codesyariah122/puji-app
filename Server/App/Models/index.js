@@ -1,4 +1,12 @@
-import {HeroContent, PanelContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData, ProductData} from '../Configs/index.js'
+import ViewerData from '../../../data/viewer.json'
+import {DataMenu, HeroContent, PanelContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData, ProductData} from '../Configs/index.js'
+
+export const getViewer = () => {
+	return ViewerData
+}
+export const getMenu = () => {
+	return DataMenu
+}
 
 export const getHero = () => {
 	return HeroContent

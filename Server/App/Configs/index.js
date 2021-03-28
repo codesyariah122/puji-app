@@ -1,3 +1,3 @@
-import { HeroContent, PanelContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData, ProductData} from './fakeDB/index.js'
+import {DataMenu, HeroContent, PanelContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData, ProductData} from './fakeDB/index.js'
 
-export {HeroContent, PanelContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData, ProductData}
+export {DataMenu, HeroContent, PanelContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData, ProductData}

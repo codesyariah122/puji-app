@@ -174,9 +174,12 @@
 
 /*map*/
 .map{
-  width: 300px!important;
-  height: 200px;
-  margin-left:1.7rem;
+  width: 330px!important;
+  height: 200px!important;
+  margin-left:1rem;
+}
+.details{
+  margin-left: 2rem!important;
 }
 
 
@@ -354,8 +357,13 @@
 
   /*map*/
   .map{
-    width: 400px;
-    height: 400px;
+    width: 800px!important;
+    height: 400px!important;
+    margin-left: 7rem;
+  }
+
+  .details{
+    margin-left: 10rem!important;
   }
 
   .polaroid{

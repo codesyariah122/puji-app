@@ -1,27 +1,18 @@
-import { getHero, getPanel, getLanding, getLandingById, getPolaroid, getPolaroidById, getParallax, getParallaxById, getProject, getProjectByCompany, getProduct, getProductById} from '../Models/index.js'
-import {logViewer} from '../helpers/logViewer.js'
+import { getViewer, getMenu, getHero, getPanel, getLanding, getLandingById, getPolaroid, getPolaroidById, getParallax, getParallaxById, getProject, getProjectByCompany, getProduct, getProductById} from '../Models/index.js'
 
-function NavMenu() {
-	const dataMenu = [
-		{label: 'Home', url: '/'},
-		{label: 'Contact', url: '/contact'}
-	]
-	return dataMenu
-}
-
+// For web router data
 export const getHome = (req, res) => {
 	const data = {
 		title: "A dead Simple",
 		description: "Puji Ermanto as a Web Developer",
 		author: "Puji Ermanto",
 		header: "My Header Page",
-		navs: NavMenu(),
+		navs: getMenu(),
 		footer: "My Footer Page",
 		hero: getHero(),
 		landing: getLanding(),
 		panel: getPanel(),
 		prod: process.env.CONFIG_PRODUCTION,
-		// viewer: logViewer()
 	}
 
 	res.render('pages/home', data)
@@ -49,6 +40,20 @@ export const getContact = (req, res) => {
 			}
 		}
 	})
+}
+
+
+// For api router data
+export const logViewer = async(req, res) => {
+	try{
+		res.status(200).json({
+			data:await getViewer()
+		})
+	}catch(err){
+		res.status(404).json({
+			message: err.response
+		})
+	}
 }
 
 export const heroContent = async(req, res) => {
