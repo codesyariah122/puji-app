@@ -38,15 +38,15 @@ export const getContact = (req, res) => {
 		panel: getPanel(),
 		prod: process.env.CONFIG_PRODUCTION
 	}
-	res.render('pages/contact', data)
-	// res.status(200).json({
-	// 	message: 'Masih dalam pengembangan bradeurrqu ... still wait lah !',
-	// 	data: {
-	// 		listApi: {
-	// 			ExampleProduct: 'https://puji-app.herokuapp.com/api/data/product/show',
-	// 		}
-	// 	}
-	// })
+	// res.render('pages/contact', data)
+	res.status(200).json({
+		message: 'Masih dalam pengembangan bradeurrqu ... still wait lah !',
+		data: {
+			listApi: {
+				ExampleProduct: 'https://puji-app.herokuapp.com/api/data/product/show',
+			}
+		}
+	})
 }
 
 export const heroContent = async(req, res) => {
