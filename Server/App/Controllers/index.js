@@ -1,4 +1,5 @@
 import { getHero, getPanel, getLanding, getLandingById, getPolaroid, getPolaroidById, getParallax, getParallaxById, getProject, getProjectByCompany, getProduct, getProductById} from '../Models/index.js'
+import {logViewer} from '../helpers/logViewer.js'
 
 function NavMenu() {
 	const dataMenu = [
@@ -19,7 +20,8 @@ export const getHome = (req, res) => {
 		hero: getHero(),
 		landing: getLanding(),
 		panel: getPanel(),
-		prod: process.env.CONFIG_PRODUCTION
+		prod: process.env.CONFIG_PRODUCTION,
+		// viewer: logViewer()
 	}
 
 	res.render('pages/home', data)

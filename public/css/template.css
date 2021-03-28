@@ -108,7 +108,7 @@
 }
 .panel-body {
   margin-top: 1rem;
-  padding: 15px;
+  padding: 5px;
 }
 .panel-body img{
   width: 250px;
@@ -117,12 +117,15 @@
 }
 .panel-body h1{
   margin-top: 2rem;
+  font-family: 'SpringSakura';
 }
 .panel-body p{
   line-height: 25px;
-  font-size: 14px;
+  font-size: 12px;
   text-indent: 21px;
   text-align: justify;
+  margin-left: -1rem!important;
+  width: 100%;
 }
 .panel-body a {
   margin-left: 5rem;
@@ -165,6 +168,15 @@
 }
 
 /* content page */
+
+/*map*/
+.map{
+  width: 250px;
+  height: 200px;
+  margin-left:.7rem;
+}
+
+
 /* polaroid */
 .polaroid{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
@@ -263,7 +275,7 @@
   }
   .nav-link{
     text-transform: uppercase;
-    margin-right: 30px;
+    margin-right: 3px;
   }
   .nav-link:hover::after{
     content:'';
@@ -336,6 +348,13 @@
   }
   /*end panel;*/
   /* content */
+
+  /*map*/
+  .map{
+    width: 400px;
+    height: 400px;
+  }
+
   .polaroid{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
     color: rgba(0,0,0,0.7);
