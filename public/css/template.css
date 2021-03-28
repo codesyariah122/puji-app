@@ -12,8 +12,10 @@ Made With Love
 }
 
 /*mobile*/
+.mobileNav{
+  box-shadow: 0 8px 10px -6px black!important;
+}
 .navbar{
-  box-shadow: 0 8px 6px -6px black!important;
   position: relative;
   z-index:1;
 }
@@ -284,6 +286,7 @@ Made With Love
 
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
+
   /* navbar */
   .navbar-brand, .nav-link {
     color: white !important;

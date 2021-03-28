@@ -15,6 +15,7 @@ new Vue({
 				const nav = document.querySelector('.navbar')
 				const scrollTop = $(this).scrollTop()
 				if(!isDesktop){
+					nav.classList.add('mobileNav')
 					if(scrollTop > 150){
 						nav.classList.remove('navbar-light')
 						nav.classList.add('navbar-light')
@@ -32,6 +33,7 @@ new Vue({
 					}
 					// console.log("is mobile")
 				}else{
+					nav.classList.remove('mobileNav')
 					if(scrollTop > 150){
 						nav.classList.remove('transparent-nav')
 						nav.classList.add('transition')
