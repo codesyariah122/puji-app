@@ -84,14 +84,15 @@
 								{{!-- {{#if_cond id 2}} {{id}} Ganjil {{else}} Genap {{/if_cond}} --}}
 
 								{{#if_cond id 2}}
-								<div class="col-md-4 col-xs-12 col-sm-12 mr-5">
+								{{!-- ganjil --}}
+								<div class="col-md-4 col-xs-12 col-sm-12">
 									<img src="{{image}}" alt="{{title}}" class="float-left img-responsive"/>
 								</div>
-								<div class="col-md-6 col-xs-12 col-sm-12 content">
+								<div class="col-md-6 col-xs-12 col-sm-12 content ganjil">
 									<h1 class="underline text-center">
 										{{title}}
 									</h1>
-									<p class="ml-1">
+									<p>
 										{{description}}
 									</p>
 									<a class="btn btn-outline-info btn-lg mb-3" href="{{link}}">Kunjungi</a>
@@ -105,7 +106,8 @@
 								</div>
 
 								{{else}}
-								<div class="col-md-6 col-xs-12 col-sm-12">
+								{{!-- genap --}}
+								<div class="genap col-md-6 col-xs-12 col-sm-12">
 									<h1 class="underline text-center">
 										{{title}}
 									</h1>
@@ -115,7 +117,7 @@
 									<a class="btn btn-outline-info btn-lg" href="{{link}}">Kunjungi</a>
 								</div>
 								<div class="col-md-6 col-xs-12 col-sm-12 content">
-									<img src="{{image}}" alt="{{title}}" class="img-responsive" style="margin-left:2rem;"/>
+									<img src="{{image}}" alt="{{title}}" class="img-responsive float-right"/>
 								</div>
 								{{/if_cond}}
 

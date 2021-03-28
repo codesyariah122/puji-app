@@ -1,3 +1,7 @@
+/*
+Design by Puji Ermanto 
+Made With Love
+*/
 @font-face {
   font-family: "SpringSakura";
   src: local("SpringSakura"), url("https://codesyariah122.github.io/assets/fonts/SpringSakura-3z1m8.woff") format("woff");
@@ -6,7 +10,10 @@
   font-family: "Reey Regular";
   src: local("Reey Regular"), url("https://codesyariah122.github.io/assets/fonts/Reey-Regular.woff") format("woff");
 }
+
+/*mobile*/
 .navbar{
+  box-shadow: 0 8px 6px -6px black!important;
   position: relative;
   z-index:1;
 }
@@ -182,6 +189,9 @@
   margin-left: 2rem!important;
 }
 
+.genap img{
+  margin-left: -11rem !important;
+}
 
 /* polaroid */
 .polaroid{
@@ -364,6 +374,26 @@
 
   .details{
     margin-left: 10rem!important;
+  }
+
+  .genap h1{
+    margin-left: -.1rem!important;
+  }
+  .genap p{
+    margin-left: -.1rem!important;
+  }
+  .genap a{
+    margin-left: -.1rem!important;
+  }
+
+  .ganjil h1{
+    margin-left: 7rem !important;
+  }
+  .ganjil p{
+    margin-left: 7rem !important;
+  }
+  .ganjil a{
+    margin-left: 7rem !important;
   }
 
   .polaroid{
