@@ -1,18 +1,20 @@
-<nav class="navbar navbar-expand navbar-light sticky-top">
-{{!-- <nav class="navbar navbar-expand-lg navbar-light sticky-top"> --}}
+<div id="nav">
+    <nav class="navbar navbar-expand navbar-light sticky-top">
+    {{!-- <nav class="navbar navbar-expand-lg navbar-light sticky-top"> --}}
 
-{{!--     <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> --}}
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mx-auto">
-                {{#each navs}}
-                <li class="menu-item">
-                    <a class="nav-link"href="{{url}}">{{label}}</a>
-                </li>
-                {{/each}}
-            </ul>
+    {{!--     <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> --}}
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    {{#each navs}}
+                    <li class="menu-item">
+                        <a class="nav-link"href="{{url}}">{{label}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>
