@@ -14,7 +14,7 @@ new Vue({
 				title: 'A Dead Simple',
 				middleTitle: 'Web',
 				polaroid:{
-					title: `Hallo ${this.getCookie('city')}`,
+					title: "Hai ! ",
 					context: "Selamat datang <br/> perkenalkan saya <span class='puji'>Puji Ermanto</span> dan ini merupakan landing page saya,<span style='font-family:SpringSakura;'>|</span> <br/>salam kenal.",
 					image: '/images/home/sayhalo1.gif'
 				}

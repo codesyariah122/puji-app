@@ -185,7 +185,6 @@ Made With Love
 .map{
   width: 330px!important;
   height: 200px!important;
-  margin-left:1rem;
 }
 .details{
   margin-left: 2rem!important;
@@ -227,7 +226,29 @@ Made With Love
   font-family: 'Poiret One', cursive;font-weight:bold;
   font-size: 25px;
 }
+
+.polaroid-vector{
+  width: 270px;
+  height: 350px;
+  margin-top: 1rem;
+}
+
 /* end polaroid */
+  .details{
+    margin-left: 5rem!important;
+    margin-top: 3rem!important;
+    margin-bottom:1rem!important;
+  }
+  .temp{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.9);
+    margin-top: -5rem;
+    margin-left: 5rem;
+  }
+
+  .feels{
+    margin-left: 5rem;
+  }
 
 .websiteku{
   text-transform: uppercase;
@@ -379,6 +400,17 @@ Made With Love
     margin-left: 10rem!important;
   }
 
+  .temp{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.9);
+    margin-top: 1.7rem;
+    margin-left: -10rem;
+  }
+
+  .feels{
+    margin-left: -10rem;
+  }
+
   .genap h1{
     margin-left: -.1rem!important;
   }
@@ -422,17 +454,18 @@ Made With Love
     font-size: 25px; 
   }
 
+  .polaroid-vector{
+    width: 500px;
+    height: 600px;
+    margin-top: 1rem;
+    margin-left: .1rem;
+  }
+
   .weather{
     width: 150px;
     height: 150px;
     margin-top: -1rem;
   }
-  .polaroid-vector{
-    width: 500px;
-    height: 400px;
-    margin-top: 1rem;
-  }
-
   /* all parallax top and bottom */
   .parallax{
     min-height: 500px; 

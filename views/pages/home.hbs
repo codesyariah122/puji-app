@@ -32,6 +32,9 @@
 					<li v-html="`${result.city} | ${result.region}`"></li>
 					<li v-html="result.ip"></li>
 					<li><img :src="`https://www.countryflags.io/${result.country_code}/shiny/64.png`"></li>
+					<li v-html="result.longitude"></li>
+					<li v-html="result.latitude"></li>
+					<li v-html="result.timezone"></li>
 				</ul>
 
 				<div class="row justify-content-center">
@@ -41,8 +44,8 @@
 						</div>
 					</div>
 					<div class="col-md-3 mt-5">
-						<h2 v-html="temp" :style="polaroidWeather.style"></h2>
-						<details style="font-size: 16px;">
+						<h2 v-html="temp" class="temp"></h2>
+						<details style="font-size: 16px;" class="feels">
 							<summary>Feels Like</summary>
 							<blockquote v-html="feelsLike" class="blockquote-footer">
 							</blockquote>
