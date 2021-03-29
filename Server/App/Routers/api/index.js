@@ -1,9 +1,9 @@
 import Router from 'express'
-import {logViewer, heroContent, landingContent, landingContentById, polaroidContent, polaroidContentById, parallaxContent, parallaxContentById, projectContent, projectContentByCompany, productData, productDataById} from '../../Controllers/index.js'
+import {getLogViewer, heroContent, landingContent, landingContentById, polaroidContent, polaroidContentById, parallaxContent, parallaxContentById, projectContent, projectContentByCompany, productData, productDataById} from '../../Controllers/index.js'
 
 const ApiRouter = Router()
 
-ApiRouter.get('/viewer/show', logViewer)
+ApiRouter.get('/viewer/show', getLogViewer)
 
 ApiRouter.get('/hero/show', heroContent)
 

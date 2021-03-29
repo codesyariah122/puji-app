@@ -1,3 +1,4 @@
+import {logViewer} from '../helpers/logViewer.js'
 import { getViewer, getMenu, getHero, getPanel, getLanding, getLandingById, getPolaroid, getPolaroidById, getParallax, getParallaxById, getProject, getProjectByCompany, getProduct, getProductById} from '../Models/index.js'
 
 // For web router data
@@ -21,6 +22,7 @@ export const getHome = (req, res) => {
 		landing: getLanding(),
 		panel: getPanel(),
 		prod: process.env.CONFIG_PRODUCTION,
+		viewer: logViewer()
 	}
 
 	res.render('pages/home', data)
@@ -64,7 +66,7 @@ export const getContact = (req, res) => {
 
 
 // For api router data
-export const logViewer = async(req, res) => {
+export const getLogViewer = async(req, res) => {
 	try{
 		res.status(200).json({
 			data:await getViewer()
