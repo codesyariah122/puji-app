@@ -3,6 +3,7 @@ import validator from 'validator'
 import UserAgent from 'user-agents'
 import axios from 'axios'
 import shell from 'shelljs'
+// import cookieSession from 'cookie-session'
 
 
 async function getIp(){
@@ -12,15 +13,15 @@ async function getIp(){
 function saveViewer(id, ip, ua, device){
 	const viewer = {id, ip, ua, device}
 	const fileBuffer = fs.readFileSync('./data/viewer.json', 'utf-8')
-	const dataViewers = JSON.parse(fileBuffer)
-	const duplicate = dataViewers.find(viewer => viewer.ip == ip)
+	const viewers = JSON.parse(fileBuffer)
+	const duplicate = viewers.find(viewer => viewer.ip === ip)
 
 	if(duplicate){
 		return false
 	}
-	dataViewers.push(viewer)
+	viewers.push(viewer)
 
-	fs.writeFileSync('./data/viewer.json', JSON.stringify(dataViewers))
+	fs.writeFileSync('./data/viewer.json', JSON.stringify(viewers))
 }
 
 export const logViewer = () => {
@@ -35,24 +36,26 @@ export const logViewer = () => {
 		const dirPath = './data'
 		const dataPath = './data/viewer.json'
 
-		if(!fs.existsSync(dirPath)){
-			fs.mkdirSync(dirPath)
-			chmod(dirPath, 0o777, (err)=>{
-				if(err)
-					throw err
+		// untuk development setup
+		// if(!fs.existsSync(dirPath)){
+		// 	fs.mkdirSync(dirPath)
+		// 	chmod(dirPath, 0o777, (err)=>{
+		// 		if(err)
+		// 			throw err
 
-				console.log('success')
-			})
-		}
+		// 		console.log('success')
+		// 	})
+		// }
 
-		if(!fs.existsSync(dataPath)){
-			fs.writeFileSync(dataPath, '[]', 'utf-8')
-		}
+		// if(!fs.existsSync(dataPath)){
+		// 	fs.writeFileSync(dataPath, '[]', 'utf-8')
+		// }
 
 		const fileBuffer = fs.readFileSync('./data/viewer.json', 'utf-8')
-		const dataViewers = JSON.parse(fileBuffer)
-		const lastId = dataViewers[dataViewers.length - 1]
-		id = (dataViewers.length > 1)  ? lastId.id + 1 : id
+		const viewers = JSON.parse(fileBuffer)
+		const lastId = viewers[viewers.length - 1]
+		// console.log(lastId)
+		id = (viewers.length > 0)  ? lastId.id + 1 : id
 
 		saveViewer(id, ip, UaData, device)
 	})

@@ -56,7 +56,8 @@ export const getContact = (req, res) => {
 		data: {
 			ExampleApi: {
 				ProductData: `${data.baseApiUrl}/api/data/product/show`,
-				ViewerData: `${data.baseApiUrl}/api/data/viewer/show`
+				ViewerData: `${data.baseApiUrl}/api/data/viewer/show`,
+				AlQuranData: `${data.baseApiUrl}/api/data/quran/show`
 			}
 		},
 		backHome: data.baseApiUrl

@@ -1,6 +1,10 @@
 import ViewerData from '../../../data/viewer.json'
+import quran from '../../../data/quran.json'
 import {DataMenu, HeroContent, PanelContent, LandingContent, PolaroidContent, ParallaxContent, ProjectData, ProductData} from '../Configs/index.js'
 
+export const getQuran = () => {
+	return quran
+}
 export const getViewer = () => {
 	return ViewerData
 }
