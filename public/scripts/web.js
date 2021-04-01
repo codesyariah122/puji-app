@@ -45,11 +45,12 @@ new Vue({
 		}
 
 	},
-
-	created(){
-		this.getIp(),		
-		this.getLocation(this.ip),
+	beforeMount(){
 		this.homeLanding(this.city, this.apiKey)
+	},
+	mounted(){
+		this.getIp(),		
+		this.getLocation(this.ip)
 	},
 
 	methods: {
@@ -80,7 +81,7 @@ new Vue({
 				this.temp = this.getCelcius(res.main.temp) + '&deg;C'
 				this.feelsLike = this.getCelcius(res.main.feels_like) + '&deg;C'
 				this.weathers = res.weather
-				// console.log(this.weathers)
+				console.log(this.weathers)
 			})
 		},
 
