@@ -98,7 +98,7 @@ new Vue({
 		},
 
 		getCookie(cname) {
-			console.log(cname)
+			// console.log(cname)
 			let name =`${cname}=`;
 			let ca = document.cookie.split(';');
 			for(let i = 0; i < ca.length; i++) {
