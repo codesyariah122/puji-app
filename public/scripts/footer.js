@@ -1,7 +1,7 @@
 new Vue({
 	el: '#footer',
 	data: {
-		parallax:{
+		parallax2:{
 			developer: {
 				phone: '6288222668778',
 				ig: 'pujiermanto',

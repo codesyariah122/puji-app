@@ -67,7 +67,7 @@ new Vue({
 			.then(res => res.json())
 			.then(res => {
 				this.result=res
-				console.log(this.result)
+				// console.log(this.result)
 				this.setCookie('city', this.result.city)
 				this.map=`https://www.openstreetmap.org/#map=12/${this.result.latitude}/${this.result.longitude}`
 			})
